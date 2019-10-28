@@ -1,0 +1,36 @@
+//Даны три числа. Найти сумму двух наибольших из них
+#include <iostream>
+#include <string>
+using namespace std;
+int main()
+{
+  int x, y, z;
+  cout << "x=";
+  cin >> x;
+  cout << "y=";
+  cin >> y;
+  cout << "z=";
+  cin >> z;
+    if (x>y)
+  {
+  if ((x<z) || (z>y))
+    {
+      cout << "-----\nsum=" << x+z;
+    }
+    else
+    {
+        cout << "-----\nsum=" << x+y;
+    }
+  }
+  else
+  {
+      if ((y<z) || (z>x))
+      {
+          cout << "-----\nsum=" << y+z;
+      }
+      else
+      {
+          cout << "-----\nsum=" << y+x;
+      }
+  }
+}

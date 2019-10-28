@@ -1,0 +1,35 @@
+//Даны координаты точки, не лежащей на координатных осях OX и OY. Определить номер координатной четверти, в которой находится данная точка
+#include <iostream>
+#include <string>
+using namespace std;
+int main()
+{
+  float ox, oy;
+  cout << "Ox=";
+  cin >> ox;
+  cout << "Oy=";
+  cin >> oy;
+  if ((ox!=0) && (oy!=0))
+  {
+   if ((ox>0) && (oy>0))
+   {
+    cout << "1 chetvert'";   
+   }
+   if ((ox<0) && (oy>0))
+   {
+    cout << "2 chetvert'";   
+   }
+   if ((ox<0) && (oy<0))
+   {
+    cout << "3 chetvert'";   
+   }
+   if ((ox>0) && (oy<0))
+   {
+    cout << "4 chetvert'";   
+   }
+  }
+  else
+  {
+   cout << "Lejit na koordinatnoi osi";   
+  }
+}

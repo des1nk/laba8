@@ -1,0 +1,36 @@
+//На плоскости расположены три точки: A, B, C. Определить, какая из двух последних точек (B или C) расположена ближе к A, и вывести эту точку и ее расстояние от точки A.
+#include <iostream>
+#include <string>
+#include <math.h>
+using namespace std;
+int main()
+{
+    float Ax, Ay, Bx, By, Cx, Cy;
+    cout << "A(x)=";
+    cin >> Ax;
+    cout << "A(y)=";
+    cin >> Ay;
+    cout << "B(x)=";
+    cin >> Bx;
+    cout << "B(y)=";
+    cin >> By;
+    cout << "C(x)=";
+    cin >> Cx;
+    cout << "C(y)=";
+    cin >> Cy;
+    if ((fabs(Ax-Bx)+fabs(Ay-By)) > (fabs(Ax-Cx)+fabs(Ay-Cy)))
+    {
+     cout << "C - blije" << "\nrasstoyanie = " << sqrt(pow(Ax-Cx,2)+pow(Ay-Cy,2));   
+    }
+    else
+    {
+        if ((fabs(Ax-Bx)+fabs(Ay-By)) == (fabs(Ax-Cx)+fabs(Ay-Cy)))
+        {
+        cout << "Odinakovoe rasstoyanie";
+        }
+            else
+            {
+            cout << "B - blije" << "\nrasstoyanie = " << sqrt(pow(Ax-Bx,2)+pow(Ay-By,2));   
+            }
+    }
+}

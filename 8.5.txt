@@ -1,0 +1,39 @@
+//Дано целое число. Вывести его строку-описание вида «отрицательное четное число», «нулевое число», «положительное нечетное число» и т. д.
+#include <iostream>
+#include <string>
+using namespace std;
+int main()
+{
+  int x;
+  cout << "x=";
+  cin >> x;
+  if (x!=0)
+  {
+      if (x>0)
+      {
+       if (x%2==1)
+       {
+        cout << "x - nechetnoe polojitel'noe";
+       }
+       else
+       {
+           cout << "x - chetnoe polojitel'noe";
+       }
+      }
+      else
+      {
+        if (x%2==-1)
+       {
+        cout << "x - nechetnoe otricatel'noe";
+       }
+       else
+       {
+           cout << "x - chetnoe otricatel'noe";
+       }  
+      }
+  }
+  else
+  {
+   cout << "x - nylevoe chislo";   
+  }
+}
